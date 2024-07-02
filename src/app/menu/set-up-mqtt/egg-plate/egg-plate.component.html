@@ -1,0 +1,13 @@
+<div class="egg-plate">
+    <img class="empty-plate" src="../../../../assets/img/eggplat.png" alt="Egg Plate">
+    <div class="egg-container">
+      <ng-container *ngFor="let egg of eggs; let i = index">
+        <img *ngIf="egg" src="../../../../assets/img/egg.png" alt="Egg" class="egg" [style.left.%]="customLeftValues[i]">
+        <div *ngFor="let egg of numtag; let i = index">
+          <div class="egg5" [style.left.%]="customLeftValues[i]">
+            {{i + 1}}
+          </div>
+        </div>
+      </ng-container>
+    </div>
+</div>

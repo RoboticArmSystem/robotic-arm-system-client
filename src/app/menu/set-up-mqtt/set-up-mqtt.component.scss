@@ -1,0 +1,496 @@
+/* 保持不變 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* 讓 .divider 的高度與 .p1 和 .p2 保持一致 */
+    // padding: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20PX;
+    margin-bottom: 20PX;
+  }
+
+  .containerSystem{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* 讓 .divider 的高度與 .p1 和 .p2 保持一致 */
+    // padding: 5px;
+    // margin-left: 50px;
+    // margin-right: 50px;
+    // margin-top: 30PX;
+    // margin-bottom: 30PX;
+  }
+
+  .container_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* 讓 .divider 的高度與 .p1 和 .p2 保持一致 */
+    padding: 5px;
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+  
+  .p1 {
+    flex: 1;
+    padding-right: 20px;
+    margin-top: 10px;
+  }
+
+
+  .p1_1 {
+    flex: 1;
+    padding-right: 0px;
+    margin-top: 10px;
+  }
+
+  .p1_2 {
+    flex: 1;
+    padding-right: 0px;
+    margin-top: 10px;
+  }
+
+  .center-vertically{
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    display: inline-block;
+    text-align: center;
+  }
+
+  .p1_2_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* 讓 .divider 的高度與 .p1 和 .p2 保持一致 */
+    margin-left: 110px;
+    margin-right: 110px;
+    flex: 1;
+    padding-right: 0px;
+  }
+
+  .p1_2_2 {
+    flex: 1;
+    padding-right: 0px;
+    margin: 10px;
+  }
+  
+  .p1 .input-group {
+    
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* 對齊 label 和 input */
+    border-radius:12px
+  }
+  
+  .p1 .input-group label {
+    white-space: nowrap; /* 防止換行 */
+    min-width: 120px; /* 最小寬度，調整為您想要的寬度 */
+    margin-right: 10px; /* 調整 label 的位置在 input 的左側 */
+    text-align: right; /* label 靠右對齊 */
+  }
+  
+  .p1 .input-group input {
+    flex: 1; /* 使用 flex 屬性平分剩餘空間 */
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: right; /* 將兩個按鈕置中 */
+    gap: 10px;
+  }
+  
+  .p2 {
+    flex: 1;
+    padding-left: 20px;
+    border: 1px solid rgb(96, 91, 91);
+    padding: 10px;
+    max-height: 200px;
+    height: 200px;
+    // overflow-y: auto;
+    margin-top: 10px;
+    border-radius:12px
+    
+  }
+
+  .p2System {
+   
+    flex: 1;
+    padding-left: 20px;
+    border: 1px solid rgb(96, 91, 91);
+    padding: 10px;
+    max-height: 300px;
+    height: 300px;
+    // overflow-y: auto;
+    margin-top: 35px;
+    border-radius:12px
+    
+  }
+
+  .p2_2 {
+    flex: 1;
+    padding-left: 20px;
+    // border: 1px solid #ccc;
+    padding: 0px;
+    max-height: 140px;
+    margin-top: 10px;
+    // overflow-y: auto;
+  }
+
+  .p2_2 .Sub2_2 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+  }
+  
+  .divider {
+    height: 100%;
+    width: 2px; /* 調整 .divider 的寬度為 2 像素 */
+    background-color: #ccc; /* 添加背景色，使其成為一條線 */
+    margin: 0 10px; /* 調整 .divider 的 margin 使其稍微大於 .p1 和 .p2 的寬度 */
+  }
+  
+  .message-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .message-armbox{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .message {
+    background-color: #efefef;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  .maincard{
+    background-color: white;
+    border-radius:12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .system_center{
+    // width: 649.7px;
+    // height: 257.5px;
+    padding: 48px 32px;
+  }
+
+  .sysdiv1{
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 80px;
+  }
+
+  .sysdiv2{
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 24px;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  .sysdiv3{
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  nz-step {
+    transform: scale(1.2); /* 您可以調整此值以更改放大倍率 */
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  video {
+    border-radius: 15px; /* 根据需要调整圆角的半径 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+  }
+
+  .notificationclass{
+    box-shadow: rgb(4, 107, 224) 0px 20px 30px -10px;
+    border-radius:12px;
+    height: 500PX;
+  }
+
+  // 新版
+
+.title-content{
+  width: 100%;
+  margin-top: 0px;
+  // margin-bottom: 0px;
+}
+
+.content {
+  width: 100%;
+  // margin-top: 0px;
+  // margin-bottom: 0px;
+}
+
+.section-small-card {
+  height: 50px;
+}
+
+.blue {
+  background-color: #4e8cff !important;
+}
+
+.dark-blue {
+  background-color: #ffc82f !important;
+}
+
+.purple {
+  background-color: #b66eff !important;
+}
+
+.wine {
+  background-color: #ff5555 !important;
+}
+
+.section {
+  height: 390px;
+}
+
+.section2{
+  height: 680px;
+}
+
+// share
+.section-share {
+  width: 100%;
+}
+
+.large-text {
+  font-size: 2rem;
+  color: white;
+  // color: #1890ff;
+}
+
+.title-background-purple{
+  background-color: #b66eff !important;
+}
+
+.title-background-blue{
+  background-color: #4e8cff !important;
+}
+
+.title-background-blackblue{
+  background-color: #4e8cff !important;
+}
+
+
+
+.title-background-wine {
+  background-color: #ff5555 !important;
+}
+
+.title-separate-sides{
+  display: flex;
+  justify-content: space-between; /* To create symmetry */
+  align-items: center; /* Vertically center the content */
+}
+
+.title-container {
+  flex: 1; /* Take up available space in the flex container */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+}
+
+.title-container-sub {
+  flex: 1; /* Take up available space in the flex container */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  height: 10px;
+}
+
+.title-text {
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.title-text-sub-win{
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  letter-spacing: 2px;
+  color: #ff5555;
+}
+
+.title-text-sub-blue{
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  letter-spacing: 2px;
+  color: #4e8cff;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  margin-right: 20px;
+}
+
+
+.title-background-orange{
+  background-color: #ffc82f !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 8px;
+}  
+
+.title-background-green{
+  background-color: #2eff23 !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 8px;
+} 
+
+.small-text {
+  font-size: 1rem;
+  color: gray;
+}
+
+.card-share {
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-share-set {
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 30px;
+  // border: 2px solid #b66eff;
+}
+
+.card-share-sub{
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 10px;
+  overflow: hidden;
+  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 10px;
+}
+
+.title-share{
+  background-color: rgb(0,21,41);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  margin-left: 10%;
+  margin-right: 20px;
+  border-radius: 50%;
+  font-family: Arial, sans-serif;
+}
+
+.item-icon {
+  color: white;
+}
+
+
+
+.plan-to-take-medicine{
+  font-weight:bold;
+  font-size: 24px;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+.EDIT{
+  margin: 15px;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  background-color: rgb(188, 188, 188);
+  color: white;
+  height: 500px;
+  font-weight:bold;
+  font-size: 24px;
+  border-radius: 12px;
+}
+
+.defualt{
+  margin: 15px;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  background-color: rgb(188, 188, 188);
+  color: white;
+  height: 700px;
+  font-weight:bold;
+  font-size: 24px;
+  border-radius: 12px;
+}
+
+.center-container {
+  // margin-top: 0px;
+  
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-weight:bold;
+  font-size: 20px;
+}
+
+.item {
+  margin: 10px;
+}
+
+
+@media screen and (max-width: 1279px) {
+  // .section-small-card {
+  //   height: 100px;
+  // }
+
+  // .section-small-card>div>div {
+  //   height: 50px;
+  // }
+
+  .card-share {
+    margin-bottom: 40px;
+  }
+
+  // .title-share {
+  //   margin-bottom: 20px;
+  // }
+}
+
+@media screen and (max-width: 959px) {
+  .section-small-card {
+    height: 100px;
+  }
+
+  // .section {
+  //   height: 1200px;
+  // }
+}

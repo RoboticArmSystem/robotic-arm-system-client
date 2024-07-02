@@ -1,0 +1,349 @@
+/* 保持不變 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* 讓 .divider 的高度與 .p1 和 .p2 保持一致 */
+    padding: 10px;
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+
+  .container_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* 讓 .divider 的高度與 .p1 和 .p2 保持一致 */
+    padding: 10px;
+  }
+  
+
+  .p1 {
+    flex: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 15px;
+  }
+
+  .p1_2 {
+    flex: 1;
+    padding-right: 0px;
+    margin-top: 10px;
+  }
+  
+  .p1 .input-group {
+    display: flex;
+    align-items: center; /* 對齊 label 和 input */
+    border-radius:12px
+
+  }
+  
+  .p1 .input-group label {
+    white-space: nowrap; /* 防止換行 */
+    min-width: 130px; /* 最小寬度，調整為您想要的寬度 */
+    margin-right: 10px; /* 調整 label 的位置在 input 的左側 */
+    text-align: right; /* label 靠右對齊 */
+  }
+  
+  .p1 .input-group input {
+    flex: 1; /* 使用 flex 屬性平分剩餘空間 */
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: right; /* 將兩個按鈕置中 */
+    gap: 10px;
+  }
+  
+  .p2 {
+    margin-top: 50px;
+    flex: 1;
+    padding-left: 20px;
+    // border: 1px solid #fa6204;
+    padding: 10px;
+    max-height: 170px;
+    height: 170px;
+    // overflow-y: auto;
+    border-radius:12px;
+    background-color: #ffdbc6;
+  }
+  
+
+  .p2_2 {
+    flex: 1;
+    padding-left: 20px;
+    // border: 1px solid #ccc;
+    padding: 0px;
+    max-height: 140px;
+    // overflow-y: auto;
+  }
+
+  .p1_2 .Sub2_2 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+  }
+  
+  .divider {
+    height: 100%;
+    width: 2px; /* 調整 .divider 的寬度為 2 像素 */
+    background-color: #ccc; /* 添加背景色，使其成為一條線 */
+    margin: 0 10px; /* 調整 .divider 的 margin 使其稍微大於 .p1 和 .p2 的寬度 */
+  }
+  
+  .message-box {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+  
+  .message {
+    background-color: #f2f2f2;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  .maincard{
+    background-color: white;
+    border-radius:12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+
+
+// 新版
+
+.title-content{
+  width: 100%;
+  margin-top: 0px;
+  // margin-bottom: 0px;
+}
+
+.content {
+  width: 100%;
+  // margin-top: 0px;
+  // margin-bottom: 0px;
+}
+
+.section-small-card {
+  height: 50px;
+}
+
+.blue {
+  background-color: #4e8cff !important;
+}
+
+.dark-blue {
+  background-color: #ffc82f !important;
+}
+
+.purple {
+  background-color: #b66eff !important;
+}
+
+.wine {
+  background-color: #ff5555 !important;
+}
+
+.section {
+  height: 460px;
+}
+
+// share
+.section-share {
+  width: 100%;
+}
+
+.large-text {
+  font-size: 2rem;
+  color: white;
+  // color: #1890ff;
+}
+
+.title-background-purple{
+  background-color: #b66eff !important;
+}
+
+
+.title-background-wine {
+  background-color: #ff9355 !important;
+  display: flex;
+  justify-content: space-between; /* To create symmetry */
+  align-items: center; /* Vertically center the content */
+}
+
+.title-container {
+  flex: 1; /* Take up available space in the flex container */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+}
+
+.title-text {
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  margin-right: 20px;
+}
+
+
+.title-background-orange{
+  background-color: #ffc82f !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 8px;
+}  
+
+.title-background-green{
+  background-color: #2eff23 !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 8px;
+} 
+
+.small-text {
+  font-size: 1rem;
+  color: gray;
+}
+
+.card-share {
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 10px;
+  overflow: hidden;
+  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-share-win {
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  // border: 2px solid #ff9355;
+  
+}
+
+.card-share-purple {
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  // border: 2px solid #b66eff;
+}
+
+.title-share{
+  background-color: rgb(0,21,41);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  margin-left: 10%;
+  margin-right: 20px;
+  border-radius: 50%;
+  font-family: Arial, sans-serif;
+}
+
+.item-icon {
+  color: white;
+}
+
+// .title-text {
+//   font-weight: bold;
+//   font-size: 20px;
+//   display: inline-block;
+//   margin-left: 20px;
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+//   letter-spacing: 2px;
+//   color: white;
+// }
+
+.plan-to-take-medicine{
+  font-weight:bold;
+  font-size: 24px;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+.EDIT{
+  margin: 15px;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  background-color: rgb(188, 188, 188);
+  color: white;
+  height: 500px;
+  font-weight:bold;
+  font-size: 24px;
+  border-radius: 12px;
+}
+
+.defualt{
+  margin: 15px;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  background-color: rgb(188, 188, 188);
+  color: white;
+  height: 700px;
+  font-weight:bold;
+  font-size: 24px;
+  border-radius: 12px;
+}
+
+.center-container {
+  // margin-top: 0px;
+  
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-weight:bold;
+  font-size: 20px;
+}
+
+.item {
+  margin: 10px;
+}
+
+
+@media screen and (max-width: 1279px) {
+  .section-small-card {
+    height: 100px;
+  }
+
+  .section-small-card>div>div {
+    height: 50px;
+  }
+
+  .card-share {
+    margin-bottom: 40px;
+  }
+
+  .title-share {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .section-small-card {
+    height: 100px;
+  }
+
+  .section {
+    height: 1200px;
+  }
+}

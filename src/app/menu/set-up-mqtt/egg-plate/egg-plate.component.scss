@@ -1,0 +1,77 @@
+// .egg-plate {
+//     position: relative;
+//   }
+  
+//   .egg {
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     /* 這裡可以調整蛋的大小和間距 */
+//     width: 40px;
+//     height: 40px;
+//     margin-top: -20px;
+//     /* 這裡可以調整蛋的上方位置 */
+//     z-index: 1;
+//   }
+
+// .empty-plate {
+//     /* 這裡可以調整蛋盤圖片的寬度和高度 */
+//     display: block;
+//     margin: 80px auto 0;
+//     /* 這裡可以調整蛋盤圖片的位置 */
+//     position: relative;
+//     width: 680px;
+// }
+
+
+    
+
+.egg-plate {
+    position: relative;
+  }
+  
+  .egg-container {
+    /* 調整蛋盤圖片的寬度和高度 */
+    display: block;
+    margin: 80px auto 0;
+    /* 調整蛋盤圖片的位置 */
+    position: relative;
+    width: 680px;
+  }
+  
+  .egg {
+    /* 調整蛋的大小和間距 */
+    position: absolute;
+    top: calc(-241px); /* 負值使蛋在empty-plate上方 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 60px;
+    /* 調整蛋的上方位置 */
+    z-index: 1;
+    
+  }
+
+
+  .egg5 {
+    /* 調整蛋的大小和間距 */
+    position: absolute;
+    top: calc(-140px); /* 負值使蛋在empty-plate上方 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 60px;
+    /* 調整蛋的上方位置 */
+    z-index: 1;
+    
+  }
+
+.empty-plate {
+/* 這裡可以調整蛋盤圖片的寬度和高度 */
+display: block;
+margin: 80px auto 0;
+/* 這裡可以調整蛋盤圖片的位置 */
+position: relative;
+width: 590px;
+}

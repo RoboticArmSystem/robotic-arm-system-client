@@ -1,0 +1,261 @@
+
+// Custom Theming for NG-ZORRO
+// For more information: https://ng.ant.design/docs/customize-theme/en
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
+
+// Override less variables to here
+// View all variables: https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/components/style/themes/default.less
+
+// @primary-color: #1890ff;
+// 自定义 nz-card 的类名和背景颜色
+.card-main {
+    .ant-card-head {
+      background-color: rgb(2, 66, 130); 
+      border-radius: 10px 10px 0 0;
+      font-size: 22px;
+      color: white;
+      min-height: 58px;
+      height: 58px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 8px;
+      border: none; /* 去除边框 */
+    }
+    .ant-card-head-title{
+        padding: 10px 0;
+    }
+  }
+
+  .card-red {
+    .ant-card-head {
+      background-color: #ff5555; // 蓝色背景
+      color: rgb(181, 6, 6);
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 10px 10px 0 0;
+      min-height: 12px;
+      height: 12px;
+      box-shadow:none
+    }
+    .ant-card-head-title{
+        padding: 10px 10px 10px 0px;
+    }
+  }
+
+  .card-orange {
+    .ant-card-head {
+      background-color: #ff9355 ; // 绿色背景
+      color: #ff9355;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 10px 10px 0 0;
+      min-height: 12px;
+      height: 12px;
+      box-shadow:none
+    }
+    .ant-card-head-title{
+        padding: 10px 10px 10px 0px;
+    }
+    .ant-card-extra{
+        padding: 0px;
+    }
+  }
+
+  .card-purple {
+    .ant-card-head {
+      background-color: #b66eff ; 
+      color: #b66eff;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 10px 10px 0 0;
+      min-height: 12px;
+      height: 12px;
+      box-shadow:none
+    }
+    .ant-card-head-title{
+        padding: 10px 10px 10px 0px;
+    }
+    .ant-card-extra{
+        padding: 0px;
+    }
+    .ant-switch-checked {
+      background: #b66eff;
+  }
+  }
+
+  .card-blue {
+    .ant-card-head {
+      background-color: #4e8cff ; 
+      color: #4e8cff;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 10px 10px 0 0;
+      min-height: 12px;
+      height: 12px;
+      box-shadow:none
+    }
+    .ant-card-head-title{
+        padding: 10px 10px 10px 0px;
+    }
+    .ant-card-extra{
+        padding: 0px;
+    }
+  }
+
+  .ant-steps-vertical > .ant-steps-item {
+    display: block;
+    flex: 1 0 auto;
+    padding-left: 0;
+    overflow: visible;
+    height: 80px;
+    }
+
+    
+    .ant-steps-vertical > .ant-steps-item > .ant-steps-item-container > .ant-steps-item-tail {
+        position: absolute;
+        top: 0;
+        left: 90px;
+        width: 1px;
+        height: 100%;
+        padding: 38px 0 20px;
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* align-items: center; */
+    }
+
+    .ant-steps {
+        padding: 35px 0px;
+    }
+    
+    .system{
+      .ant-divider-horizontal {
+        display: flex;
+        clear: both;
+        width: 100%;
+        min-width: 100%;
+        margin:5px 0 24px 0;
+      }
+    }
+   
+
+    .ant-notification-notice {
+      border-radius: 10px !important;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+    .ant-switch-inner {
+      font-size: 18px;
+      font-weight: bold;
+  }
+
+  //彈跳視窗
+ .ant-message-notice-content {
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+
+  // API偵測圖片
+  .ant-result-icon > .anticon {
+  font-size: 130px;
+  }
+  // API偵測標題1
+  .ant-result-title {
+    font-size: 30px;
+  }
+  // API偵測標題2
+  .ant-result-subtitle {
+    font-size: 18px;
+  }
+
+  //MQTT編輯開
+  .switch-container{
+    .ant-switch {
+      background: #4e8cff;
+    }
+  }
+  
+  //MQTT編輯關
+  .switch-container{
+    .ant-switch-checked{
+      background:#ff5555
+    }
+  }
+
+  //鏡頭關
+  .card-purple{
+    .ant-switch.ant-switch-checked{
+      background: #ff5555;
+    }
+  } 
+  
+
+  //鏡頭開
+  .card-purple{
+    .ant-switch{
+      background: #4e8cff;
+    }
+  }
+
+  // 連線狀態圓屬性
+  .ant-badge-status-dot {
+    position: relative;
+    top: -3.5px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    border-radius: 50%;
+  }
+  // 字形
+  .ant-badge-status-text {
+    margin-left: 8px;
+    color: #fff;
+    font-size: 18.5px;
+  }
+  
+  .error{
+    .ant-badge-status-text {
+      margin-left: 8px;
+      color: #fff;
+      font-size: 18.5px;
+    }
+  }
+
+  .ant-badge-status-error {
+    background-color: rgb(220, 54, 46);
+  }
+  
+
+  // 已連線狀態圓屬性
+  .ant-badge-status-processing {
+    position: relative;
+    background-color: #56ff03;
+  }
+
+  // 已連線狀態圓特效屬性
+  .ant-badge-status-processing::after {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 12px solid rgb(201, 249, 189);
+    // border: 2px solid #b1f3b4;
+    border-radius: 80%;
+    animation: antStatusProcessing 0.8s infinite ease-in-out;
+    content: '';
+  }
+
+  .ant-modal-content {
+    
+    border-radius: 12px;
+  }
+
+  .ant-btn-primary {
+    border-radius: 12px;
+  }
+
+  .ant-divider {
+    border-top: 1px solid rgb(47 47 47 / 20%);
+  }
+  
+  
+  

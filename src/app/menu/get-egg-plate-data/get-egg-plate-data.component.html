@@ -1,0 +1,79 @@
+
+<div class="content" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap.gt-md="40px">
+    <div class="section-share section" fxLayout="row" fxLayoutGap="50px" fxLayout.lt-md="column">
+        <div class="card-share-purple" fxLayout="column" fxFlex="50">
+            <div class="title-background-wine">
+                <div class="title-container">
+                    <span class="title-text">
+                    <span nz-icon nzType="api" nzTheme="outline"></span>
+                    智慧蛋盤連線設定
+                    </span>
+                </div>
+                <div class="switch-container">
+                    <span>
+                    <nz-switch [ngModel]="!isMQTTEdit" nzCheckedChildren="關閉" nzUnCheckedChildren="編輯" (ngModelChange)="MQTTEditChange()"></nz-switch>
+                    </span>
+                </div>
+            </div>
+            <div style="height: 100%;border: 2px solid #ff9355;border-radius: 0 0 10px 10px;">
+            <div class="p1">
+                <div class="input-group">
+                    <label for="ipAddress" style="font-weight: bold;">MQTT IP Address：</label>
+                    <input style="border-radius:12px" nz-input type="text" id="ipAddress" [(ngModel)]="ipAddress" autocomplete="off" [disabled]="isMQTTEdit" placeholder="請輸入MQTT伺服器的IP"/>
+                </div>
+                <div *ngIf="isipAddress" style="color: red;margin-left: 140px;">MQTT IP Address不得為空!</div>
+                <div style=" margin-bottom: 10px;"></div>
+                <div class="input-group">
+                    <label for="port" style="font-weight: bold;">MQTT Port：</label>
+                    <input style="border-radius:12px" nz-input type="text" id="port" [(ngModel)]="port" autocomplete="off" [disabled]="isMQTTEdit"  placeholder="請輸入埠號"/>
+                </div>
+                <div *ngIf="isport" style="color: red;margin-left: 140px;">MQTT Port不得為空!</div>
+                <div style=" margin-bottom: 10px;"></div>
+                <div class="input-group">
+                    <label for="topic" style="font-weight: bold;">MQTT Topic：</label>
+                    <input style="border-radius:12px" nz-input type="text" id="topic" [(ngModel)]="topic" autocomplete="off" [disabled]="isMQTTEdit"  placeholder="請輸入您的主題"/>
+                </div>
+                <div *ngIf="istopic" style="color: red;margin-left: 140px;">MQTT Topic不得為空!</div>
+                <div style=" margin-bottom: 10px;"></div>
+                <div class="button-group">
+                    <button style="border-radius:12px;font-size: 14px;font-weight: bold" nz-button nzType="primary" (click)="connectToMqtt()" [disabled]="isMQTTEdit">儲存</button>
+                </div>
+                
+                <!-- 連線訊息 -->
+                
+
+                <div class="p2" >   
+                    <span style="font-weight: bold;">MQTT連線操作紀錄：</span>
+                    <div class="message-box"  #messageBox>
+                        <div class="message" *ngFor="let message of MQTTSetConnectionmes" >
+                            {{ message }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="card-share-purple" fxLayout="column" fxFlex="50">
+            <div class="title-background-purple">
+            <span class="title-text">
+                <span nz-icon nzType="apartment" nzTheme="outline"></span>
+                自動偵測機械手臂狀態
+            </span>
+            </div>
+            <div style="height: 100%;border: 2px solid #b66eff;border-radius: 0 0 10px 10px;">
+            <div class="p1">
+                <nz-result *ngIf="ArmStatus"
+                nzTitle="偵測成功"
+                nzStatus="success"
+                nzSubTitle="已連接到機械手臂的 Raspberry Pi ">
+                </nz-result>
+                <nz-result *ngIf="!ArmStatus"
+                nzTitle="偵測失敗"
+                nzStatus="error"
+                nzSubTitle="請開啟機械手臂的 Raspberry Pi ">
+                </nz-result>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

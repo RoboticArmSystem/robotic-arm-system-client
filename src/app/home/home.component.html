@@ -1,0 +1,64 @@
+<ngx-loading-bar [color]="'#0000ff'" [height]="'4px'" [includeSpinner]="false"></ngx-loading-bar>
+
+  <nz-layout class="app-layout">
+    <nz-sider class="menu-sidebar"
+              nzCollapsible
+              nzWidth="250px"
+              nzBreakpoint="xxl"
+              [nzCollapsedWidth]="0"
+              [(nzCollapsed)]="isCollapsed"
+              [nzTrigger]="null">
+      <div class="sidebar-logo">
+        
+      </div>
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+        <li class="menufont" nz-submenu nzOpen nzTitle="智慧設備管理" nzIcon="hdd">
+          <ul>
+            <li class="menusubfont" nz-menu-item nzMatchRouter>
+              <a routerLink="/home/SmartEggPlateConnect">設備連線</a>
+            </li>
+          </ul>
+      </li>
+        <li class="menufont" nz-submenu nzOpen nzTitle="智慧監控" nzIcon="desktop">
+          <ul>
+            <li class="menusubfont" nz-menu-item nzMatchRouter>
+              <a routerLink="/home/SetUpMqtt">蛋盤與機械手臂監控</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout class="layout">
+      <nz-header>
+        <div class="app-header">
+          <div style="width: 30px; height: 30px;"  class="trigger">
+            <span (click)="isCollapsed = !isCollapsed" class="header-trigger">
+              <span  nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></span>
+            </span>
+          </div>
+          <div class="headerTitle">
+            <!-- <a href="https://ng.ant.design/" target="_blank">
+              <img src="../../assets/img/armlogo.png" alt="logo">
+              <div>機械手臂監控平台</div>
+              <p>智慧夾蛋系統</p>
+            </a> -->
+            雞蛋排序系統
+          </div>
+          <span class="header-user">
+            <!-- <a href="/home/user">
+              <span class="user-icon" nz-icon nzType="user" nzTheme="outline"></span>
+              <span class="user-text">User</span>
+            </a>
+           
+            <span class="user-exit" nz-icon nzType="export" nzTheme="outline" ></span>  -->
+            <!-- <button nz-button nzType="default" (click)="openLogoutConfirmationModal()">登出系统</button> -->
+          </span>
+        </div>
+      </nz-header>
+      <nz-content>
+        <div class="inner-content">
+          <router-outlet></router-outlet>
+        </div>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>

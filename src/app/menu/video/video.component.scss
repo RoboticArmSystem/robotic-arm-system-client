@@ -1,0 +1,17 @@
+nz-card{
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .center-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* 使得內容垂直置中 */
+    border-radius:12px;
+  }
+
+  #videoElement{
+    border-radius: 12px; /* 调整这个值来控制圆角的大小 */
+  }

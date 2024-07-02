@@ -1,0 +1,173 @@
+<div class="content" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap.gt-md="0px">
+    <div class="section-share section" fxLayout="row" fxLayoutGap="40px" fxLayout.lt-md="column">
+        <div class="card-share-set" fxLayout="column" fxFlex="100">
+          <div class="title-separate-sides title-background-blackblue">
+            <div class="title-container">
+              <span class="title-text">
+                蛋盤即時監控畫面
+              </span>
+            </div>
+            <div class="switch-container ">
+              <span style="font-size: 20px;font-weight: bold;display: block;margin: 0 7px 0 25px;color: #ffffff;">
+                <!-- 已連線 -->
+                <nz-badge *ngIf="isMqttContectSatus" nzStatus="processing" nzText="智慧蛋盤已連線"></nz-badge>
+                <!-- 未連線 -->
+                <nz-badge *ngIf="!isMqttContectSatus" class="error" nzStatus="error" nzText="智慧蛋盤未連線"></nz-badge>
+              </span>
+            </div>
+        </div>
+          <div style="height: 100%;">
+           
+            <div class="container">
+                <!-- 子標題1 -->
+                <nz-card 
+                    class="card-orange" 
+                    style="
+                        width: 900px; 
+                        height: 260px; 
+                        border-radius:12px; 
+                        border: 2px solid #ff9355;
+                        margin-left: 5px;
+                        margin-right: 5px;" 
+                    [nzTitle]="eggplatetitle">
+        
+                    <div class="p1_2">
+                        <app-egg-plate [eggs]="eggs"></app-egg-plate> 
+                    </div>
+                </nz-card>
+                <ng-template #eggplatetitle>
+                    <span nz-icon nzType="inbox" nzTheme="outline"></span>
+                    蛋盤狀態
+                </ng-template>
+                
+                 <!-- 子標題2 -->
+                <nz-card 
+                    class="card-red" 
+                    style="
+                        width: 900px; 
+                        height: 260px; 
+                        border-radius:12px; 
+                        border: 2px solid #ff5555;
+                        margin-left: 5px;
+                        margin-right: 5px;" 
+                    [nzTitle]="messagetitle">
+        
+                    <div class="p1_2">
+                        <div class="p2" >   
+                            <div class="message-box" #messageBox >
+                                <div class="message" *ngFor="let message of MQTTmessage" >
+                                    {{ message }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nz-card>
+                
+                <ng-template #messagetitle>
+                    <span nz-icon nzType="sound" nzTheme="outline"></span>
+                    蛋盤狀態訊息
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="content" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap.gt-md="40px">
+    <div class="section-share section2" fxLayout="row" fxLayoutGap="40px" fxLayout.lt-md="column">
+        <div class="card-share-set" fxLayout="column" fxFlex="100">
+            <div class="title-separate-sides title-background-blackblue">
+                <div class="title-container">
+                <span class="title-text">
+                    系統即時設備監控
+                </span>
+                </div>
+                <div class="switch-container">
+                <span style="font-size: 20px;font-weight: bold;display: block;margin: 0 7px 0 25px;color: #ffffff;">
+                    <!-- 已連線 -->
+                    <nz-badge *ngIf="isRoboticArmContectSatus" nzStatus="processing" nzText="機器手臂已連線"></nz-badge>
+                    <!-- 未連線 -->
+                    <nz-badge *ngIf="!isRoboticArmContectSatus" class="error" nzStatus="error" nzText="機器手臂未連線"></nz-badge>
+                </span>
+                </div>
+            </div>
+          <div style="height: 100%;">
+                <div class="container">
+                     <!-- 子標題1 -->
+                    <nz-card 
+                        class="card-blue" 
+                        style="
+                            width: 900px; 
+                            border-radius:12px; 
+                            border: 2px solid #4e8cff;
+                            margin-left: 5px;
+                            margin-right: 5px;" 
+                        [nzTitle]="systitle" >
+                        <button style="margin-top: 10px;" nz-button nzType="primary" [nzSize]="'large'" nzShape="round" (click)="takePhoto()" [disabled]="isBtn">開始偵測雞蛋</button>
+                            <span class="system"><nz-divider></nz-divider></span>
+                        <div class="containerSystem">
+                        <div class="p1_2">
+                            <nz-steps nzDirection="vertical">
+                                <nz-step nzTitle="拍攝雞蛋影像" [nzStatus]="catchStatus" [nzIcon]="catchIcon"></nz-step>
+                                <nz-step nzTitle="進行模型訓練" [nzStatus]="AIStatus" [nzIcon]="AIIcon"></nz-step>
+                                <nz-step *ngIf="isArmIcon === 2" nzTitle="機械手臂運作" [nzStatus]="ArmStatus" [nzIcon]="armTemplateOK"></nz-step> <!--setting-->
+                                <nz-step *ngIf="isArmIcon === 1" nzTitle="機械手臂運作" [nzStatus]="ArmStatus" [nzIcon]="armTemplateClose"></nz-step> <!--setting-->
+                                <nz-step *ngIf="isArmIcon === 0" nzTitle="機械手臂運作" [nzStatus]="ArmStatus" [nzIcon]="loadingTemplate"></nz-step> <!--setting-->
+                                <nz-step nzTitle="完成裝蛋" [nzStatus]="endStatus" [nzIcon]="endIcon"></nz-step>
+                                <ng-template #armTemplateOK> <img src="../../../assets/img/robotic-armOK.png" width="28.8px" height="28.8px"></ng-template>
+                                <ng-template #armTemplateClose> <img src="../../../assets/img/robotic-armClose.png" width="28.8px" height="28.8px"></ng-template>
+                                <ng-template #loadingTemplate><span nz-icon nzType="loading"></span></ng-template>
+                            </nz-steps>
+                        </div>
+                            <div class="p2System" >  
+                                <span style="font-weight: bold;">辨識雞蛋座標紀錄：</span> 
+                                <div class="message-armbox" #ARMmessageBox >
+                                    <div class="message" *ngFor="let message of ARMmessage" >
+                                        {{ message }}
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </nz-card>
+                    <ng-template #systitle>
+                        <span nz-icon nzType="setting" nzTheme="outline"></span>
+                        系統運作狀態
+                    </ng-template>
+                    <!-- 子標題2 -->
+                    <nz-card class="card-purple" 
+                            style="
+                                width: 900px; 
+                                height: 550px; 
+                                border-radius:12px; 
+                                border: 2px solid #b66eff;
+                                margin-left: 5px;
+                                margin-right: 5px;" 
+                            [nzTitle]="cameratitle"
+                            [nzExtra]="extraTemplate">
+                        
+                        <div class="p2_2" >
+                            <div class="webcam-container">
+                                <webcam
+                                    [height]="480"
+                                    [width]="640"
+                                    [trigger]="triggerObservable"
+                                    [allowCameraSwitch]="false"
+                                    (imageCapture)="captureImage($event)"
+                                    #webcam>
+                                    </webcam>
+                            </div>
+                        </div>
+                    </nz-card>
+                    <ng-template #cameratitle>
+                        <span nz-icon nzType="video-camera" nzTheme="outline"></span>
+                        影像狀態
+                    </ng-template>
+                    <ng-template #extraTemplate>
+                        <!-- <nz-switch [ngModel]="isCamera" nzCheckedChildren="關" nzUnCheckedChildren="開"></nz-switch> -->
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
